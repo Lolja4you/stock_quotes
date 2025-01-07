@@ -31,6 +31,6 @@ class Price(Base):
     price = Column(Float)
     volume = Column(Integer)
     timestamp = Column(DateTime)
-    security = relationship("Security", back_populates="prices")
+    # security = relationship("Security", back_populates="prices"
 
 Security.prices = relationship("Price", order_by=Price.timestamp, back_populates="security")
